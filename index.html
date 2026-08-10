@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SECTOR35 — Widebody & Performance Garage</title>
+<meta name="description" content="SECTOR35 is a widebody and performance garage specializing in aero kits, suspension geometry, and track-ready builds for the GT-R platform." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-inner">
+    <span class="loader-tag">SECTOR35</span>
+    <div class="loader-track"><div class="loader-bar" id="loaderBar"></div></div>
+    <span class="loader-pct" id="loaderPct">LOADING CHASSIS — 0%</span>
+  </div>
+</div>
+
+<!-- 3D stage, fixed behind all content -->
+<canvas id="stage"></canvas>
+
+<!-- HUD corner brackets over the stage -->
+<div class="hud" aria-hidden="true">
+  <span class="hud-corner hud-tl"></span>
+  <span class="hud-corner hud-tr"></span>
+  <span class="hud-corner hud-bl"></span>
+  <span class="hud-corner hud-br"></span>
+  <div class="hud-readout" id="hudReadout">
+    <span class="hud-line">CHASSIS <b>R35</b></span>
+    <span class="hud-line">STAGE <b id="hudStage">00 / INTRO</b></span>
+  </div>
+</div>
+
+<!-- Nav -->
+<header class="nav">
+  <a href="#hero" class="nav-logo light-trigger">SECTOR<span class="accent">35</span></a>
+  <nav class="nav-links">
+    <a href="#services" class="light-trigger">Services</a>
+    <a href="#process" class="light-trigger">Process</a>
+    <a href="#specs" class="light-trigger">Specs</a>
+    <a href="#contact" class="light-trigger">Contact</a>
+  </nav>
+  <a href="#contact" class="btn btn-ghost btn-small light-trigger">Book a Slot</a>
+  <button class="nav-burger light-trigger" id="navBurger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="nav-mobile" id="navMobile">
+  <a href="#services" class="light-trigger">Services</a>
+  <a href="#process" class="light-trigger">Process</a>
+  <a href="#specs" class="light-trigger">Specs</a>
+  <a href="#contact" class="light-trigger">Contact</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero" class="stage-section hero" data-stage="0" data-label="00 / INTRO">
+    <div class="hero-inner">
+      <span class="eyebrow mono">CHASSIS R35 &middot; ROCKET BUNNY V1 AERO KIT</span>
+      <h1 class="display light-trigger">
+        BUILT WIDE.<br>
+        BUILT TO HOLD<br>
+        A LINE.
+      </h1>
+      <p class="lead">
+        SECTOR35 is a widebody and performance garage specializing in aero kits,
+        suspension geometry, and track‑ready builds for the GT‑R platform.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary light-trigger">Start a Build</a>
+        <a href="#services" class="btn btn-ghost light-trigger">See Services</a>
+      </div>
+    </div>
+    <div class="scroll-cue">
+      <span class="mono">SCROLL</span>
+      <span class="scroll-chevron"></span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee-wrap">
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>WIDEBODY</span><span class="dot">&bull;</span>
+        <span>AERO KITS</span><span class="dot">&bull;</span>
+        <span>SUSPENSION GEOMETRY</span><span class="dot">&bull;</span>
+        <span>WRAP &amp; LIVERY</span><span class="dot">&bull;</span>
+        <span>DYNO TUNING</span><span class="dot">&bull;</span>
+        <span>FABRICATION</span><span class="dot">&bull;</span>
+        <span>WIDEBODY</span><span class="dot">&bull;</span>
+        <span>AERO KITS</span><span class="dot">&bull;</span>
+        <span>SUSPENSION GEOMETRY</span><span class="dot">&bull;</span>
+        <span>WRAP &amp; LIVERY</span><span class="dot">&bull;</span>
+        <span>DYNO TUNING</span><span class="dot">&bull;</span>
+        <span>FABRICATION</span><span class="dot">&bull;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="stage-section services" data-stage="1" data-label="01 / CAPABILITIES">
+    <div class="panel panel-wide">
+      <span class="eyebrow mono">CAPABILITIES</span>
+      <h2 class="display light-trigger">Four ways we widen the envelope</h2>
+
+      <div class="card-grid">
+        <article class="card light-trigger">
+          <span class="card-index mono">01</span>
+          <h3>Aero &amp; Widebody</h3>
+          <p>Rocket Bunny, LB‑Works, and custom flare kits — fitted and blended panel‑gap tight.</p>
+        </article>
+        <article class="card light-trigger">
+          <span class="card-index mono">02</span>
+          <h3>Suspension &amp; Geometry</h3>
+          <p>Coilovers, camber kits, and corner‑weighting dialed for the track you actually drive.</p>
+        </article>
+        <article class="card light-trigger">
+          <span class="card-index mono">03</span>
+          <h3>Performance Tuning</h3>
+          <p>Turbo upgrades, fuel systems, and ECU calibration, verified on our in‑house dyno.</p>
+        </article>
+        <article class="card light-trigger">
+          <span class="card-index mono">04</span>
+          <h3>Wrap &amp; Livery</h3>
+          <p>Paint‑match wraps and full livery design — track numbers to sponsor plates.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="stage-section process" data-stage="2" data-label="02 / BUILD FLOW">
+    <div class="panel panel-narrow-right">
+      <span class="eyebrow mono">HOW A BUILD RUNS</span>
+      <h2 class="display light-trigger">Five stages, one build sheet</h2>
+
+      <ol class="steps">
+        <li class="step light-trigger">
+          <span class="step-num mono">01</span>
+          <div>
+            <h3>Consult</h3>
+            <p>Walk in with the car and the goal. We scope fitment, budget, and timeline together.</p>
+          </div>
+        </li>
+        <li class="step light-trigger">
+          <span class="step-num mono">02</span>
+          <div>
+            <h3>Design</h3>
+            <p>Aero and stance mocked up digitally before a single panel is cut.</p>
+          </div>
+        </li>
+        <li class="step light-trigger">
+          <span class="step-num mono">03</span>
+          <div>
+            <h3>Fabricate</h3>
+            <p>Flares, spacers, and brackets built and test‑fitted in‑house.</p>
+          </div>
+        </li>
+        <li class="step light-trigger">
+          <span class="step-num mono">04</span>
+          <div>
+            <h3>Install</h3>
+            <p>Suspension, aero, and drivetrain work installed to spec.</p>
+          </div>
+        </li>
+        <li class="step light-trigger">
+          <span class="step-num mono">05</span>
+          <div>
+            <h3>Dyno &amp; Handoff</h3>
+            <p>Tuned, corner‑balanced, and logged before it goes back on the road.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SPECS -->
+  <section id="specs" class="stage-section specs" data-stage="3" data-label="03 / REFERENCE BUILD">
+    <div class="panel panel-wide">
+      <span class="eyebrow mono">REFERENCE BUILD</span>
+      <h2 class="display light-trigger">2014 GT‑R R35 &mdash; Rocket Bunny V1 Aero</h2>
+
+      <div class="spec-plate">
+        <div class="spec-row light-trigger"><span>Chassis</span><b>R35</b></div>
+        <div class="spec-row light-trigger"><span>Kit</span><b>Rocket Bunny V1 Aero</b></div>
+        <div class="spec-row light-trigger"><span>Aero</span><b>Front lip, side skirts, rear diffuser, GT wing</b></div>
+        <div class="spec-row light-trigger"><span>Fitment</span><b>Staggered, flush, track‑focused stance</b></div>
+        <div class="spec-row light-trigger"><span>Suspension</span><b>Coilovers, adjustable camber &amp; toe</b></div>
+        <div class="spec-row light-trigger"><span>Status</span><b>In‑house shop build</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="stage-section cta-section" data-stage="4" data-label="04 / NEXT BUILD">
+    <div class="panel panel-center">
+      <span class="eyebrow mono">NEXT UP</span>
+      <h2 class="display light-trigger">Bring us the car.<br>We&rsquo;ll bring the aero.</h2>
+      <a href="#contact" class="btn btn-primary btn-large light-trigger">Book a Consultation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact" class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="nav-logo light-trigger">SECTOR<span class="accent">35</span></span>
+        <p>Widebody and performance garage for the GT‑R platform and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <span class="mono footer-label">GARAGE</span>
+        <p>Unit 4, Industrial Row<br>Open by appointment</p>
+      </div>
+      <div class="footer-col">
+        <span class="mono footer-label">HOURS</span>
+        <p>Tue&ndash;Sat &middot; 10:00&ndash;19:00<br>Sun&ndash;Mon &middot; Closed</p>
+      </div>
+      <div class="footer-col">
+        <span class="mono footer-label">CONTACT</span>
+        <p><a href="mailto:build@sector35.example" class="light-trigger">build@sector35.example</a><br>
+        <a href="tel:+10000000000" class="light-trigger">+1 (000) 000‑0000</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SECTOR35 Garage. All builds by appointment.</span>
+      <span class="mono">R35 &middot; RB V1 AERO</span>
+    </div>
+  </footer>
+
+</main>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
